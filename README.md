@@ -88,8 +88,8 @@ npm test
   changed via the broker dashboard), set the `RESPONSE_MODE` environmental
   variable to one of the [available modes](app.js#L42).
 * To set the error mode of the service broker (note that this can also be
- changed via the broker dashboard), set the `ERROR_MODE` environmental
- variable to one of the [available modes](app.js#L28).
+  changed via the broker dashboard), set the `ERROR_MODE` environmental
+  variable to one of the [available modes](app.js#L28).
 
 ---
 
@@ -101,10 +101,10 @@ npm test
 
 * First you will need to deploy the broker as an application:
     ```bash
-    cf push overview-broker -i 1 -m 256M -k 256M --random-route -b https://github.com/cloudfoundry/nodejs-buildpack
+    cf push overview-broker -i 1 -m 256M -k 256M --random-route -b https://github.com/cloudfoundry/nodejs-buildpack#v1.7.52
     ```
 * You can also use an application manifest to deploy the broker as an
-    application:
+  application:
     ```bash
     wget https://raw.githubusercontent.com/cloudfoundry/overview-broker/master/examples/cloudfoundry/manifest.yaml
     cf push
@@ -120,8 +120,8 @@ npm test
     ```bash
     cf create-service-broker --space-scoped overview-broker admin password <url-of-deployed-broker>
     ```
-    The basic auth credentials "admin" and "password" can be specified if needed
-    (see [Configuration](#configuration)).
+  The basic auth credentials "admin" and "password" can be specified if needed
+  (see [Configuration](#configuration)).
 * The services and plans provided by this broker should now be available in the
   marketplace:
   ```bash
@@ -135,8 +135,8 @@ npm test
     ```bash
     cf create-service overview-service small my-instance
     ```
-    You can give your service a specific name in the dashboard by providing the
-    `name` configuration parameter:
+  You can give your service a specific name in the dashboard by providing the
+  `name` configuration parameter:
     ```bash
     cf create-service overview-service small my-instance -c '{ "name": "My Service Instance" }'
     ```
@@ -163,8 +163,8 @@ npm test
     kubectl create -f overview-broker-app.yaml
     kubectl create -f overview-broker-service.yaml
     ```
-    You can check this has succeeded by running `kubectl get deployments` and
-    `kubectl get services`.
+  You can check this has succeeded by running `kubectl get deployments` and
+  `kubectl get services`.
 * Once the load balancer is up and running, he overview broker dashboard should
   be accessible:
     ```bash

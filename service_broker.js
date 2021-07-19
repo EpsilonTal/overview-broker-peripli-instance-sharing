@@ -156,7 +156,8 @@ class ServiceBroker {
             free: true,
             maintenance_info: {
                 version: require('./package.json').version
-            }
+            },
+            metadata: { supportsInstanceSharing: true }
         });
 
         // Add a large plan with a schema
